@@ -1,0 +1,19 @@
+# Custom commands for me
+
+# haskell ghcup
+[ -f "/home/tntokum/.ghcup/env" ] && . "/home/tntokum/.ghcup/env" # ghcup-env
+
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# aliases
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
+
+# alias sage="$CONDA_PREFIX/envs/sage/bin/sage"
+
+source "$HOME/.cargo/env"
+eval "$(zoxide init bash)"
+
+export BROWSER=wslview
