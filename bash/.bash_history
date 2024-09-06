@@ -1153,3 +1153,73 @@ l
 tmux
 tmux a
 tmux
+z
+git clone https://github.com/tntokum/dotfiles.git
+l dotfiles/
+rm -rf dotfiles/
+git clone https://github.com/tntokum/dotfiles.git
+z dotfiles/
+l
+z bash/
+l
+z ..
+stow bash
+stow nvim
+stow tmux
+l
+exit
+l
+exit
+ls
+z ..
+l
+z tntokum-coreutils/
+l
+git log
+git show HEAD
+exit
+v .
+g ..
+z ..
+l
+git clone https://github.com/serde-rs/json.git
+l
+z json/
+l
+z sr
+l
+z ../
+l
+z ../json/
+l
+z src/
+l
+v .
+v ..
+z ../.
+z ..
+l
+cargo create pickle_test
+cargo new pickle_test
+z pickle_test/
+l
+v .
+exit
+v ~/.config/
+v ~/.config/tmux/tmux.conf 
+l ~/.config/tmux/
+v ~/.config/tmux/tmux.conf 
+z ~/.config/tmux/tmux.conf
+z ~/.config/tmux/
+l
+z plugins/
+l
+l tpm
+git clone git clone https://github.com/tmux-plugins/tpm
+git clone https://github.com/tmux-plugins/tpm
+l
+l tpm
+z ..
+exit
+l
+exit
