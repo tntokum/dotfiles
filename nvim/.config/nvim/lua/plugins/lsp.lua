@@ -218,6 +218,8 @@ return {
 					end,
 				},
 			})
+
+			vim.env.RUSTUP_TOOLCHAIN = "stable"
 		end,
 	},
 
@@ -256,5 +258,11 @@ return {
 				-- javascript = { { "prettierd", "prettier" } },
 			},
 		},
+	},
+
+	{
+		"mrcjkb/rustaceanvim",
+		version = "^5", -- Recommended
+		lazy = false, -- This plugin is already lazy
 	},
 }
