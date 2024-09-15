@@ -17,3 +17,5 @@ source "$HOME/.cargo/env"
 eval "$(zoxide init bash)"
 
 export BROWSER=wslview
+
+export PATH="$PATH:/opt/nvim-linux64/bin"
