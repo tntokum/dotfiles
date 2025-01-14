@@ -137,3 +137,10 @@ if [ -f "/home/tntokum/miniforge3/etc/profile.d/mamba.sh" ]; then
     . "/home/tntokum/miniforge3/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
+
+#-----------------------
+# keep wsl distro alive
+#-----------------------
+if ! pgrep -u "$(whoami)" -x "dbus-daemon" > /dev/null; then
+   dbus-launch true
+fi
