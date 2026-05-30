@@ -144,20 +144,20 @@ return {
 							callback = vim.lsp.buf.document_highlight,
 						})
 
-                        vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
-                            buffer = event.buf,
-                            group = highlight_augroup,
-                            callback = vim.lsp.buf.clear_references,
-                        })
+						vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+							buffer = event.buf,
+							group = highlight_augroup,
+							callback = vim.lsp.buf.clear_references,
+						})
 
-                        vim.api.nvim_create_autocmd("LspDetach", {
-                            group = vim.api.nvim_create_augroup("kickstart-lsp-detach", { clear = true }),
-                            callback = function(event2)
-                                vim.lsp.buf.clear_references()
-                                vim.api.nvim_clear_autocmds({ group = "kickstart-lsp-highlight", buffer = event2.buf })
-                            end,
-                        })
-                    end
+						vim.api.nvim_create_autocmd("LspDetach", {
+							group = vim.api.nvim_create_augroup("kickstart-lsp-detach", { clear = true }),
+							callback = function(event2)
+								vim.lsp.buf.clear_references()
+								vim.api.nvim_clear_autocmds({ group = "kickstart-lsp-highlight", buffer = event2.buf })
+							end,
+						})
+					end
 
 					-- The following code creates a keymap to toggle inlay hints in your
 					-- code, if the language server you are using supports them
@@ -231,6 +231,7 @@ return {
 				-- But for many setups, the LSP (`ts_ls`) will work just fine
 				-- ts_ls = {},
 				--
+				rust_analyzer = {},
 
 				lua_ls = {
 					-- cmd = { ... },
